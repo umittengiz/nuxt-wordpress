@@ -1,0 +1,23 @@
+query GetAllCategoriesPaths {
+  categories(first: 100) {
+    nodes {
+      slug
+      language {
+        name
+        slug
+      }
+      posts(first: 1) {
+        nodes {
+          date
+        }
+      }
+      translations {
+        slug
+        language {
+          name
+          slug
+        }
+      }
+    }
+  }
+}
